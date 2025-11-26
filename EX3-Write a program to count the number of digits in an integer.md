@@ -1,6 +1,6 @@
 # Ex3
 ## Write a program to count the number of digits in an integer.
-## DATE: 26-09-2025
+## DATE: 26-11-2025
 ## AIM:
 To write a Java program to count the number of digits in an integer.
 
