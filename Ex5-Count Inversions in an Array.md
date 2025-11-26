@@ -1,21 +1,26 @@
-# Ex5 Count Inversions in an Array
-## DATE:14-11-2025
+# Ex5 
+## Count Inversions in an Array
+## DATE: 26-11-2025
 ## AIM:
 To write a Java program  to Count the number of inversions in an array where inversion is defined as: arr[i] > arr[j] and i < j
 
 ## Algorithm
-1. Read n and the array elements.
-2. Use merge sort to split the array into halves.
-3. Count inversions in the left half and right half.
-4. Merge the halves and count cross-inversions when right element < left element.
-5. Add all inversion counts and print the result.   
+1. Start the program. 
+2. Declare an array arr[] and a variable count = 0 to store the number of inversions.
+3. Read the array elements from the user.
+4. For each pair of elements (arr[i], arr[j]), check if arr[i] > arr[j] and i < j.
+5. If the above condition is true, increment the inversion count.
+6. Continue until all pairs are checked.
+7. Display the total number of inversions found in the array and stop the program.
 
 ## Program:
-```
+```java
 /*
-Program toto Count the number of inversions in an array where inversion is defined as: arr[i] > arr[j] and i < j
-Developed by: SINGAMALA VENKATA SAI KUMAR REDDY
-RegisterNumber: 212223230208
+Program to Count the number of inversions in an array where inversion is defined as: arr[i] > arr[j] and i < j
+Developed by: L yagnesh kumar reddy
+Register Number: 212223100024
+*/
+
 import java.util.Scanner;
 
 public class CountInversions {
@@ -65,14 +70,12 @@ public class CountInversions {
     }
 }
 
-
-*/
 ```
 
 ## Output:
+<img width="357" height="240" alt="image" src="https://github.com/user-attachments/assets/2fd053aa-21d5-439b-8af8-78fb80123460" />
 
-<img width="466" height="401" alt="image" src="https://github.com/user-attachments/assets/b2686bb6-2298-4e84-bfaf-02f66055ae6c" />
 
 
 ## Result:
-Thus the Java program to to Count the number of inversions in an array where inversion is defined as: arr[i] > arr[j] and i < jis implemented successfully.
+Thus the Java program to to Count the number of inversions in an array where inversion is defined as: arr[i] > arr[j] and i < j is implemented successfully.
