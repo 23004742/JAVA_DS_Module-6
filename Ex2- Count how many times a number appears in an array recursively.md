@@ -1,62 +1,54 @@
-# Ex2 Count how many times a number appears in an array recursively.
-## DATE:14-11-2025
+# Ex2
+## Count how many times a number appears in an array recursively.
+## DATE: 26-11-2025
 ## AIM:
 To write a Java program to Count how many times a number appears in an array recursively.
 
 ## Algorithm
-1. Read the value of n, input n elements into array arr, and read the number key whose occurrences must be counted.
-2. Call the recursive function countOccurrences(arr, n, 0, key) starting from index 0.
-3. Inside the recursive function, check if the current index equals n;if yes, return 0 because the entire array has been checked.
-4. If arr[index] equals key, return 1 + countOccurrences(arr, n, index + 1, key);otherwise return countOccurrences(arr, n, index + 1, key).
-5. Return the final count to the main program and print how many times key appears in the array.   
+1. Start the program.  
+2. Read the number of elements and store them in an array.  
+3. Get the number to be counted from the user.  
+4. Define a recursive function `countOccurrences()` that returns how many times the number appears.  
+5. Use base and recursive conditions to count occurrences.  
+6. Display the result.  
+7. Stop the program.   
 
 ## Program:
-```
+```java
 /*
 Program Count how many times a number appears in an array recursively.
-Developed by: SINGAMALA VENKATA SAI KUMAR REDDY
-RegisterNumber: 212223230208
+Developed by: L yagnesh kumar reddy
+Register Number: 212223100024
+*/
+
 import java.util.Scanner;
 
 public class CountOccurrencesRecursive {
-    
-    public static int countOccurrences(int[] arr, int n, int index, int key) {
-        if (index == n) {
-            return 0; 
-        }
-        if (arr[index] == key) {
-            return 1 + countOccurrences(arr, n, index + 1, key);
-        } else {
-            return countOccurrences(arr, n, index + 1, key);
-        }
+    static int countOccurrences(int arr[], int n, int key) {
+        if (n == 0)
+            return 0;
+        return (arr[n - 1] == key ? 1 : 0) + countOccurrences(arr, n - 1, key);
     }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-    
+        System.out.print("Enter number of elements: ");
         int n = sc.nextInt();
-
-        int[] arr = new int[n];
-        for (int i = 0; i < n; i++) {
+        int arr[] = new int[n];
+        System.out.println("Enter the elements:");
+        for (int i = 0; i < n; i++)
             arr[i] = sc.nextInt();
-        }
-
+        System.out.print("Enter number to count: ");
         int key = sc.nextInt();
-
-        int count = countOccurrences(arr, n, 0, key);
-
-        System.out.println("The number " + key + " appears " + count + " time(s) in the array.");
+        System.out.println("The number " + key + " appears " + countOccurrences(arr, n, key) + " times.");
+        sc.close();
     }
 }
-
-
-*/
 ```
 
 ## Output:
+<img width="985" height="540" alt="image" src="https://github.com/user-attachments/assets/397a8639-8e9d-4bef-bb30-0a95baa40eb9" />
 
-<img width="679" height="380" alt="image" src="https://github.com/user-attachments/assets/f8c606ed-86b7-4c72-9b48-ae94ce15babb" />
 
 
 ## Result:
